@@ -1,5 +1,5 @@
 import { Check, Shield, Smartphone, Gift, Mail, Bell, DollarSign, Star } from "lucide-react";
-import secureBankingImage from "@/assets/secure-banking.jpg";
+import familySecurityImage from "@/assets/family-security.jpg";
 
 const benefits = [
   {
@@ -64,8 +64,8 @@ export function BenefitsSection() {
         <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <img 
-              src={secureBankingImage} 
-              alt="Secure banking technology with trusted professionals" 
+              src={familySecurityImage} 
+              alt="Nigerian father teaching his child about secure financial technology" 
               className="w-full h-auto rounded-2xl shadow-warm"
             />
           </div>
