@@ -117,14 +117,14 @@ export function BenefitsSection() {
               <div className="absolute -top-4 -right-4 glass-subtle p-3 rounded-xl shadow-glass animate-float">
                 <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5 text-warm-orange" />
-                  <span className="text-sm font-bold text-warm-brown">256-bit SSL</span>
+                  <span className="text-sm font-bold text-white">256-bit SSL</span>
                 </div>
               </div>
               
               <div className="absolute -bottom-4 -left-4 glass-subtle p-3 rounded-xl shadow-glass animate-float" style={{animationDelay: '1s'}}>
                 <div className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-emerald-500" />
-                  <span className="text-sm font-bold text-warm-brown">Verified Safe</span>
+                  <span className="text-sm font-bold text-white">Verified Safe</span>
                 </div>
               </div>
             </div>
