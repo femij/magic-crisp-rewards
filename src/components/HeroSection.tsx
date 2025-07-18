@@ -101,7 +101,7 @@ export function HeroSection() {
                   <div className="w-8 h-8 bg-gradient-warm rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">+5</span>
                   </div>
-                  <span className="text-sm font-semibold text-warm-brown">Points earned!</span>
+                  <span className="text-sm font-semibold text-white">Points earned!</span>
                 </div>
               </div>
               
@@ -110,7 +110,7 @@ export function HeroSection() {
                   <div className="w-8 h-8 bg-warm-orange rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">₦</span>
                   </div>
-                  <span className="text-sm font-semibold text-warm-brown">Cash reward ready</span>
+                  <span className="text-sm font-semibold text-white">Cash reward ready</span>
                 </div>
               </div>
             </div>
