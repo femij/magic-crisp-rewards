@@ -22,8 +22,8 @@ export function Header() {
           </div>
           
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden sm:inline-flex font-medium">
-              Sign In
+            <Button variant="ghost" className="hidden sm:inline-flex font-medium" asChild>
+              <a href="/login">Sign In</a>
             </Button>
             <Button variant="warm" className="font-semibold shadow-floating hover:shadow-warm">
               Sign Up For Free
