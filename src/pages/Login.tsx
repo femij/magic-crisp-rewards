@@ -39,7 +39,7 @@ const Login = () => {
 
       {/* Login Card */}
       <Card className="w-full max-w-md glass-subtle shadow-glass border-warm-orange/20 animate-scale-in">
-        <CardHeader className="text-center space-y-4">
+        <CardHeader className="text-center space-y-4 mt-8">
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-warm-brown to-warm-orange bg-clip-text text-transparent">
             Welcome Back
           </CardTitle>
