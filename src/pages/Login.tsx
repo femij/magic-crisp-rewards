@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Footer } from "@/components/Footer";
 import { Star, Sparkles, Eye, EyeOff } from "lucide-react";
 
 const Login = () => {
@@ -18,7 +19,8 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-hero flex flex-col">
+      <div className="flex-1 flex items-center justify-center p-6">
       {/* Header Logo */}
       <div className="absolute top-6 left-6">
         <Link to="/" className="flex items-center gap-3 group">
@@ -131,6 +133,8 @@ const Login = () => {
         <div className="absolute bottom-32 right-32 w-40 h-40 bg-warm-brown/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-soft-cream-dark/30 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 };
