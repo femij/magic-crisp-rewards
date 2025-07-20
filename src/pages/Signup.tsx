@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Star, Sparkles, Eye, EyeOff } from "lucide-react";
-import { Footer } from "@/components/Footer";
 
 const signupSchema = z.object({
   firstName: z.string().min(1, "First name is required").min(2, "First name must be at least 2 characters"),
@@ -48,8 +47,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex flex-col">
-      <div className="flex-1 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-6">
       {/* Header Logo */}
       <div className="absolute top-6 left-6">
         <Link to="/" className="flex items-center gap-3 group">
@@ -266,8 +264,6 @@ const Signup = () => {
         <div className="absolute bottom-32 right-32 w-40 h-40 bg-warm-brown/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-soft-cream-dark/30 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
-      </div>
-      <Footer />
     </div>
   );
 };
