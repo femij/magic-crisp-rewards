@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -25,8 +26,8 @@ export function Header() {
             <Button variant="ghost" className="hidden sm:inline-flex font-medium" asChild>
               <a href="/login">Sign In</a>
             </Button>
-            <Button variant="warm" className="font-semibold shadow-floating hover:shadow-warm">
-              Sign Up For Free
+            <Button variant="warm" className="font-semibold shadow-floating hover:shadow-warm" asChild>
+              <Link to="/signup">Sign Up For Free</Link>
             </Button>
           </div>
         </div>

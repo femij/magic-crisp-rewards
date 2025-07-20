@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sparkles, ArrowRight, Shield, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-shopping.jpg";
 
 export function HeroSection() {
@@ -59,9 +60,11 @@ export function HeroSection() {
                   />
                   <Shield className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-warm-orange/60" />
                 </div>
-                <Button variant="hero" className="h-14 px-8 text-lg font-bold group">
-                  Get Started
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <Button variant="hero" className="h-14 px-8 text-lg font-bold group" asChild>
+                  <Link to="/signup">
+                    Get Started
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
                 </Button>
               </div>
               
