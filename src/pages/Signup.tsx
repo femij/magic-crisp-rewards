@@ -68,7 +68,7 @@ const Signup = () => {
 
       {/* Signup Card */}
       <Card className="w-full max-w-lg glass-subtle shadow-glass border-warm-orange/20 animate-scale-in">
-        <CardHeader className="text-center space-y-4 mt-12">
+        <CardHeader className="text-center space-y-4 mt-16 md:mt-20 lg:mt-24">
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-warm-brown to-warm-orange bg-clip-text text-transparent">
             Join Magic Rewards
           </CardTitle>
