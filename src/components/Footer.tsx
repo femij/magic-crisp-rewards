@@ -114,7 +114,7 @@ export function Footer() {
                 <span>•</span>
                 <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>
                 <span>•</span>
-                <a href="#" className="hover:text-white transition-colors duration-300">Support</a>
+                <Link to="/faq" className="hover:text-white transition-colors duration-300">FAQ</Link>
               </div>
             </div>
             
