@@ -112,7 +112,7 @@ export function Footer() {
               <div className="hidden md:flex items-center gap-4 text-sm text-white/60">
                 <Link to="/privacy-policy" className="hover:text-white transition-colors duration-300">Privacy Policy</Link>
                 <span>•</span>
-                <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>
+                <Link to="/terms-of-service" className="hover:text-white transition-colors duration-300">Terms of Service</Link>
                 <span>•</span>
                 <Link to="/faq" className="hover:text-white transition-colors duration-300">FAQ</Link>
               </div>
