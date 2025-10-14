@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Star, ArrowRight, Mail, Shield, Users, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -109,7 +110,7 @@ export function Footer() {
                 © 2024 Magic Rewards. All rights reserved.
               </p>
               <div className="hidden md:flex items-center gap-4 text-sm text-white/60">
-                <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                <Link to="/privacy-policy" className="hover:text-white transition-colors duration-300">Privacy Policy</Link>
                 <span>•</span>
                 <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>
                 <span>•</span>
