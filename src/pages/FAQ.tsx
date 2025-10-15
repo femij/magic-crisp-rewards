@@ -1,13 +1,13 @@
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, Star, Sparkles } from "lucide-react";
 
 const FAQ = () => {
   const faqs = [
@@ -94,25 +94,55 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
-      <Header />
+    <div className="min-h-screen bg-gradient-hero relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-warm-orange/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-warm-brown/10 rounded-full blur-3xl animate-float-delayed"></div>
+      </div>
+
+      {/* Header */}
+      <header className="glass-subtle sticky top-0 z-50 border-b border-warm-orange/10">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-warm rounded-2xl flex items-center justify-center shadow-floating group-hover:shadow-warm transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-12">
+                  <Star className="w-5 h-5 text-white" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-warm-orange-light rounded-full animate-pulse opacity-80"></div>
+              </div>
+              <div className="relative">
+                <span className="text-2xl font-bold bg-gradient-to-r from-warm-brown to-warm-orange bg-clip-text text-transparent">
+                  Magic Rewards
+                </span>
+                <Sparkles className="absolute -top-2 -right-6 w-4 h-4 text-warm-orange animate-pulse" />
+              </div>
+            </Link>
+            
+            <Button variant="warm" asChild>
+              <Link to="/">Back to Home</Link>
+            </Button>
+          </div>
+        </div>
+      </header>
       
-      <main className="container mx-auto px-4 py-16 max-w-4xl">
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+      <main className="container mx-auto px-4 py-16 max-w-4xl relative z-10">
+        <div className="glass-subtle rounded-3xl shadow-floating p-8 md:p-12">
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">
+            <div className="w-16 h-16 bg-gradient-warm rounded-2xl flex items-center justify-center shadow-warm">
               <HelpCircle className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-warm-brown to-warm-orange bg-clip-text text-transparent">
                 Frequently Asked Questions
               </h1>
             </div>
           </div>
           
-          <p className="text-gray-600 mb-8 text-lg">
+          <p className="text-foreground/80 mb-8 text-lg">
             Find answers to common questions about Magic Rewards. Can't find what you're looking for? 
-            <a href="mailto:support@magicrewards.com" className="text-purple-600 hover:text-purple-700 font-semibold ml-1">
+            <a href="mailto:support@magicrewards.com" className="text-warm-orange hover:text-warm-brown font-semibold ml-1 transition-colors">
               Contact our support team
             </a>.
           </p>
@@ -122,39 +152,37 @@ const FAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-gray-200 rounded-lg px-6 bg-gradient-to-r from-purple-50/30 to-pink-50/30 hover:from-purple-50/50 hover:to-pink-50/50 transition-all"
+                className="border border-warm-orange/20 rounded-lg px-6 bg-warm-orange/5 hover:bg-warm-orange/10 transition-all"
               >
                 <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="font-semibold text-gray-900 text-lg pr-4">
+                  <span className="font-semibold text-foreground text-lg pr-4">
                     {faq.question}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-700 leading-relaxed pb-6 pt-2">
+                <AccordionContent className="text-foreground/80 leading-relaxed pb-6 pt-2">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
 
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Still have questions?</h3>
-              <p className="text-gray-700 mb-4">
+          <div className="mt-12 pt-8 border-t border-warm-orange/20">
+            <div className="glass-subtle rounded-xl p-6 text-center shadow-warm">
+              <h3 className="text-xl font-bold text-foreground mb-2">Still have questions?</h3>
+              <p className="text-foreground/80 mb-4">
                 Our support team is here to help you 24/7
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="mailto:support@magicrewards.com"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
-                >
-                  Email Support
-                </a>
-                <a 
-                  href="tel:1-800-MAGIC-REWARDS"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors"
-                >
-                  Call Us
-                </a>
+                <Button variant="warm" asChild>
+                  <a href="mailto:support@magicrewards.com">
+                    Email Support
+                  </a>
+                </Button>
+                <Button variant="outline" asChild>
+                  <a href="tel:1-800-MAGIC-REWARDS">
+                    Call Us
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -162,7 +190,7 @@ const FAQ = () => {
           <div className="mt-8">
             <Link 
               to="/" 
-              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold transition-colors"
+              className="inline-flex items-center text-warm-orange hover:text-warm-brown font-semibold transition-colors"
             >
               ← Back to Home
             </Link>
